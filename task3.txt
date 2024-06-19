@@ -1,0 +1,35 @@
+1. nslookup google.com
+ping google.com
+
+2. traceroute google.com
+
+3. sudo netstat -ltupan
+sudo netstat -lntup | grep ":80"
+
+4. ip route
+ip addr
+hostname
+
+5. iptables -A INPUT -p icmp -j DROP
+ping google.com 
+iptables -D INPUT -p icmp -j DROP
+
+dig +short youtube.com
+nano /etc/hosts
+youtubeIP google.com www.google.com
+systemctl restart networkmanager
+
+6. ps aux
+top
+
+7. systemctl list-units --type=service --state=running
+systemctl status nginx
+sudo systemctl restart nginx
+sudo systemctl reload nginx
+
+8. sudo lsof +D /var/log
+
+9. df -h
+du -sh /var/log
+df -i
+
