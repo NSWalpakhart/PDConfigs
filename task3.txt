@@ -33,3 +33,4 @@ sudo systemctl reload nginx
 du -sh /var/log
 df -i
 
+test
