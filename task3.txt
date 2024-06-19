@@ -33,8 +33,3 @@ sudo systemctl reload nginx
 du -sh /var/log
 df -i
 
-
-fin
-fin2
-
-fin3
