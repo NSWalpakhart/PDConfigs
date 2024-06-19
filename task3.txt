@@ -1,4 +1,4 @@
-1. dig +short google.com
+1. dig google.com +short
 ping google.com
 
 2. traceroute google.com
@@ -14,7 +14,7 @@ hostname
 ping google.com 
 iptables -D INPUT -p icmp -j DROP
 
-dig +short youtube.com
+dig youtube.com +short
 nano /etc/hosts
 youtubeIP google.com www.google.com
 systemctl restart networkmanager
