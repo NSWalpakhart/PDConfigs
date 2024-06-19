@@ -1,4 +1,4 @@
-1. nslookup google.com
+1. dig +short google.com
 ping google.com
 
 2. traceroute google.com
