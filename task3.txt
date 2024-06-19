@@ -34,3 +34,5 @@ du -sh /var/log
 df -i
 
 test
+
+etst
