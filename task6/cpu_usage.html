@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="1"> <!-- Обновлять страницу каждую секунду -->
+    <title>System Monitoring</title>
+</head>
+<body>
+    <h1>System Monitoring</h1>
+    <div id="stats">
+        <p id="cpuUsage">CPU Usage: -</p>
+    </div>
+
+    <script>
+        function fetchData() {
+            fetch('/cpu/stats.json', {
+                cache: 'no-cache'
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('cpuUsage').innerText = "CPU Usage: " + data.cpuUsage + "%";
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        }
+        fetchData(); // Вызвать функцию один раз при загрузке страницы
+        setInterval(fetchData, 1000); // Обновлять данные каждую секунду
+    </script>
+</body>
+</html>
