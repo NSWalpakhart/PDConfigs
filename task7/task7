@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PRIVATE_SERVER_IP="172.31.7.169"
+SSH_KEY="~/.ssh/testkey.pem"
+USER="ubuntu"
+
+ssh -i $SSH_KEY $USER@$PRIVATE_SERVER_IP "sudo apt update"
+
